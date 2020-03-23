@@ -33,15 +33,13 @@ export default function Application(props) {
       [id]: appointment
     };
 
-    return axios
-      .put(`/api/appointments/${id}`, appointment)
-      .then(() =>
-        setState({
-          ...state,
-          appointments
-        })
-      )
-      .catch(e => console.log(e));
+    return axios.put(`/api/appointments/${id}`, appointment).then(() =>
+      setState({
+        ...state,
+        appointments
+      })
+    );
+    // .catch(e => console.log(e));
   }
 
   // delete an existing interview
@@ -55,15 +53,13 @@ export default function Application(props) {
       [id]: appointment
     };
 
-    return axios
-      .delete(`/api/appointments/${id}`, appointment)
-      .then(() =>
-        setState({
-          ...state,
-          appointments
-        })
-      )
-      .catch(e => console.log(e));
+    return axios.delete(`/api/appointments/${id}`, appointment).then(() =>
+      setState({
+        ...state,
+        appointments
+      })
+    );
+    // .catch(e => console.log(e));
   }
 
   useEffect(() => {
