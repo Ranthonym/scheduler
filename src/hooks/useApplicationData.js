@@ -11,6 +11,7 @@ export default function useApplicationData() {
 
   const setDay = day => setState(state => ({ ...state, day }));
 
+  //function that dynamically updates number of spots remaining after save/deletion of interview
   const getRemainingSpots = appointment => {
     const currentDay = state.days.find(day => day.name === state.day);
 

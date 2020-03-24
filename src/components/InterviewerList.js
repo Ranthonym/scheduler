@@ -1,10 +1,16 @@
 import React from "react";
+import PropTypes from "prop-types";
 import InterviewerListItem from "components/InterviewerListItem";
 
 import "components/InterviewerList.scss";
 const classnames = require("classnames");
 
-export default function InterviewList(props) {
+export default function InterviewerList(props) {
+  InterviewerList.propTypes = {
+    value: PropTypes.number,
+    onChange: PropTypes.func.isRequired
+  };
+
   const interviewerListClass = classnames("interviewers");
   const interviewers = props.interviewers.map(interviewer => {
     return (

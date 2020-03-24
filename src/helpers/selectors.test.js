@@ -46,7 +46,7 @@ const state = {
       name: "Jane Doe",
       avatar: "https://i.imgur.com/LpaY82x.png"
     },
-    ("4": {
+    "4": {
       id: 4,
       name: "Heather Freely",
       avatar: "https://i.imgur.com/Nmx0Qxo.png"
