@@ -55,7 +55,7 @@ export default function Appointment(props) {
       .catch(e => transition(ERROR_DELETE, true));
   }
   return (
-    <Fragment>
+    <div data-testid="appointment">
       <Header time={props.time}></Header>
       {mode === EMPTY && <Empty onAdd={onAdd} />}
       {mode === SHOW && (
@@ -99,6 +99,6 @@ export default function Appointment(props) {
       {mode === ERROR_SAVE && (
         <Error message={"Could not save appointment"} onClose={onCancel} />
       )}
-    </Fragment>
+    </div>
   );
 }
