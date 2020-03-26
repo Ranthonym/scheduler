@@ -11,14 +11,23 @@ export default function useApplicationData() {
 
   const setDay = day => setState(state => ({ ...state, day }));
 
-  //function that dynamically updates number of spots remaining after save/deletion of interview
-  const getRemainingSpots = appointment => {
-    const currentDay = state.days.find(day => day.name === state.day);
-
-    if (appointment.interview === null) {
-      currentDay.spots++;
-    } else if (appointment.interview !== null) {
+  const updateSpotsOnSave = (appointment, id) => {
+    if (
+      state.appointments[id].interview === null &&
+      appointment.interview !== null
+    ) {
+      const currentDay = state.days.find(day => day.name === state.day);
       currentDay.spots--;
+    }
+  };
+
+  const updateSpotsOnDelete = (appointment, id) => {
+    if (
+      state.appointments[id].interview !== null &&
+      appointment.interview === null
+    ) {
+      const currentDay = state.days.find(day => day.name === state.day);
+      currentDay.spots++;
     }
   };
 
@@ -34,8 +43,12 @@ export default function useApplicationData() {
       [id]: appointment
     };
 
+    // if (appointment.interview != null && after axios request is also not null) then only you call remaining spots
+
+    updateSpotsOnSave(appointment, id);
+
     return axios.put(`/api/appointments/${id}`, appointment).then(() => {
-      getRemainingSpots(appointment);
+      // getRemainingSpots(appointment);
       setState({
         ...state,
         appointments
@@ -54,8 +67,10 @@ export default function useApplicationData() {
       [id]: appointment
     };
 
+    updateSpotsOnDelete(appointment, id);
+
     return axios.delete(`/api/appointments/${id}`, appointment).then(() => {
-      getRemainingSpots(appointment);
+      // getRemainingSpots(appointment);
       setState({
         ...state,
         appointments
