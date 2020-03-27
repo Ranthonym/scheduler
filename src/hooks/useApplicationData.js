@@ -43,12 +43,9 @@ export default function useApplicationData() {
       [id]: appointment
     };
 
-    // if (appointment.interview != null && after axios request is also not null) then only you call remaining spots
-
     updateSpotsOnSave(appointment, id);
 
     return axios.put(`/api/appointments/${id}`, appointment).then(() => {
-      // getRemainingSpots(appointment);
       setState({
         ...state,
         appointments
@@ -70,7 +67,6 @@ export default function useApplicationData() {
     updateSpotsOnDelete(appointment, id);
 
     return axios.delete(`/api/appointments/${id}`, appointment).then(() => {
-      // getRemainingSpots(appointment);
       setState({
         ...state,
         appointments
