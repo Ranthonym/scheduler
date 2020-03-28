@@ -2,6 +2,8 @@
 
 Interview Scheduler is a simple, responsive, full stack single-page scheduling web app built using React, HTML, CSS, JS on the front-end, and Node, Webpack, Axios and PostgreSQL on the back-end. React components were built using Storybook. API server was built on Express. Testing suite was built using React Testing Library, Jest and Cypress. The app allows a user to add new, edit and delete interview appointments.
 
+### Stretch features
+
 This project implemented a stretch goal of deploying the API server on Heroku and the client on Netlify. CircleCI was used to setup a continous production pipleline.
 
 The workflow was as follows: local:master --> Github:master --> CircleCI:production --> Github:production --> Netlify
