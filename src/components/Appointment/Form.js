@@ -40,9 +40,6 @@ export default function Form(props) {
             onChange={event => setName(event.target.value)}
             onSubmit={event => event.preventDefault()}
             data-testid="student-name-input"
-            /*
-          This must be a controlled component
-        */
           />
         </form>
         <section className="appointment__validation">{error}</section>

@@ -11,6 +11,7 @@ export default function useApplicationData() {
 
   const setDay = day => setState(state => ({ ...state, day }));
 
+  //function that updates spots remaining after save action
   const updateSpotsOnSave = (appointment, id) => {
     if (
       state.appointments[id].interview === null &&
@@ -21,6 +22,7 @@ export default function useApplicationData() {
     }
   };
 
+  //function that updates spots remaining after delete action
   const updateSpotsOnDelete = (appointment, id) => {
     if (
       state.appointments[id].interview !== null &&
