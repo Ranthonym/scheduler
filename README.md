@@ -4,7 +4,7 @@ Interview Scheduler is a simple, responsive, full stack single-page scheduling w
 
 ### Stretch features
 
-This project implemented a stretch goal of deploying the API server on Heroku and the client on Netlify. CircleCI was used to setup a continous production pipleline.
+This project implemented a stretch goal of deploying the API server on Heroku and the client on Netlify. CircleCI was used to setup a continuous production pipleline.
 
 The workflow was as follows: local:master --> Github:master --> CircleCI:production --> Github:production --> Netlify
 
