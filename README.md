@@ -15,11 +15,11 @@ The workflow was as follows: local:master --> Github:master --> CircleCI:product
 
 ## User Access
 
-["Live Client: lhl-scheduler.netlify.com "](https://lhl-scheduler.netlify.com/){:target="\_blank"}
+["Live Client: lhl-scheduler.netlify.com "](https://lhl-scheduler.netlify.com/)
 
 ## API server
 
-[Heroku deployment](https://schedule-lhl.herokuapp.com/api/days){:target="\_blank"}
+[Heroku deployment](https://schedule-lhl.herokuapp.com/api/days)
 
 ## Setup
 
