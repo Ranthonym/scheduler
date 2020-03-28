@@ -8,10 +8,18 @@ The workflow was as follows: local:master --> Github:master --> CircleCI:product
 
 ## Screenshots
 
-!["Screenshot of displaying existing interviews from api server"]()
-!["Screenshot of form for creating new interview"]()
-!["Screenshot of editing form for exiting interview"]()
-!["Screenshot of confirmation message for deleting existing interview"]()
+!["Screenshot of displaying existing interviews from api server"](https://github.com/Ranthonym/scheduler/blob/master/docs/Screenshot%20of%20displaying%20existing%20interviews%20from%20api%20server.png)
+!["Screenshot of form for creating new interview"](https://github.com/Ranthonym/scheduler/blob/master/docs/Screenshot%20of%20form%20for%20creating%20new%20interview.png)
+!["Screenshot of editing form for existing interview"](https://github.com/Ranthonym/scheduler/blob/master/docs/Screenshot%20of%20editing%20form%20for%20exiting%20interview.png)
+!["Screenshot of confirmation message for deleting existing interview"](https://github.com/Ranthonym/scheduler/blob/master/docs/Screenshot%20of%20confirmation%20message%20for%20deleting%20existing%20interview.png)
+
+## User Access
+
+!["Live Client: lhl-scheduler.netlify.com "](https://lhl-scheduler.netlify.com/)
+
+## API server
+
+![Heroku deployment](https://schedule-lhl.herokuapp.com/api/days)
 
 ## Setup
 
